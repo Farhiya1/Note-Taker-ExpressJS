@@ -13,3 +13,25 @@ class Store {
   writeFile(newNotes) {
     return writeFilePromise("db/db.json", JSON.stringify(newNotes));
   }
+
+  getNotes() {
+    return this.readFile().then((notes) => {
+      return JSON.parse(notes);
+    });
+  }
+
+  postNote(newNote) {
+    return this.getNotes()
+      .then((notes) => {
+        return [...notes, newNote];
+        console.log(notes);
+      })
+      .then((newNotesArray) => {
+        console.log(newNotesArray);
+        this.writeFile(newNotesArray);
+      })
+      .then(() => {
+        return newNote;
+      });
+  }
+}
