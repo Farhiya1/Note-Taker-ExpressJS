@@ -12,3 +12,14 @@ router.get("/api/notes", (request, response) => {
     .catch((error) => response.status(500).json(error));
 });
 
+// /api/notes -> add a new note to the json file
+router.post("/api/notes", (request, response) => {
+  console.log(request);
+  store
+    .postNote(request.body)
+    .then((note) => response.json(note))
+    .catch((error) => {
+      res.status(500).json(error);
+    });
+});
+
