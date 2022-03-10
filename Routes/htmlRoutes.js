@@ -9,3 +9,4 @@ router.get("/notes", (request, response) => {
 router.get("*", (request, response) => {
   response.sendFile(path.join(__dirname, "../public/index.html"));
 });
+
