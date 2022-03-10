@@ -17,9 +17,9 @@ app.use(express.static("/public"));
 
 app.use("/api", apiRouter);
 app.use("/", htmlRouter);
-app.use("/api/notes", notes);
+// app.use("/api/notes", notes);
 
 // Start the app on the given port
 app.listen(PORT, () => {
-  console.log("App listening.....");
+  console.log(`App listening on port ${PORT}.....`);
 });
