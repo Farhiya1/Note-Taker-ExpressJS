@@ -23,3 +23,4 @@ router.post("/api/notes", (request, response) => {
     });
 });
 
+module.exports = router;
