@@ -16,6 +16,7 @@ class Store {
 
   getNotes() {
     return this.readFile().then((notes) => {
+      console.log("notes ins tore getnotes", notes);
       return JSON.parse(notes);
     });
   }
