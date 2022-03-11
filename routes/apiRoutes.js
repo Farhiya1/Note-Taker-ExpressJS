@@ -3,7 +3,7 @@ const res = require("express/lib/response");
 const store = require("../db/store");
 
 // /api/notes -> response with all notes from JSON file
-router.get("/api/notes", (request, response) => {
+router.get("/notes", (request, response) => {
   store
     .getNotes()
     .then((notes) => {
@@ -13,7 +13,7 @@ router.get("/api/notes", (request, response) => {
 });
 
 // /api/notes -> add a new note to the json file
-router.post("/api/notes", (request, response) => {
+router.post("/notes", (request, response) => {
   console.log(request);
   store
     .postNote(request.body)
