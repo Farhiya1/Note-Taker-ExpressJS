@@ -1,3 +1,4 @@
+console.log("hello");
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -72,6 +73,7 @@ const renderActiveNote = () => {
 };
 
 const handleNoteSave = () => {
+  console.log("clicked");
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
