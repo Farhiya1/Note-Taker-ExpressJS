@@ -73,6 +73,10 @@ To access deployed application Demo on heroku link
 
 ![Screenshot of completed application](./documents/Screenshot-ConsoleNoError.png)
 
+4. Screenshot of db.json file with saved notes text.
+
+![Screenshot of completed application](./documents/Screenshot-dbjsontext.png)
+
 # References
 
 1. https://www.npmjs.com/package/inquirer
